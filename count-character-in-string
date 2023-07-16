@@ -1,0 +1,19 @@
+// Link to the task https://www.codewars.com/kata/52efefcbcdf57161d4000091
+
+
+function count(string) {
+  const charactersMap = new Map();
+  if(string.length) {
+    const stringCharacters = string.split('');
+    stringCharacters.forEach((char, index) => {
+      const charCount = charactersMap.get(char);
+      if(charCount){
+        charactersMap.set(char, charCount + 1);
+        return;
+      } 
+        charactersMap.set(char, 1);
+    })
+  }
+  
+  return Object.fromEntries(charactersMap);
+}
