@@ -10,8 +10,8 @@ function countUniqueValues(numbers){
             j++;
         }
         else {
-            numbers[i] = numbers[j];
             i++;
+            numbers[i] = numbers[j];
             j++;
         }
     }
